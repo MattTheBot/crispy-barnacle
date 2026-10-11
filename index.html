@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="a">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[BRAND] — Menswear</title>
+  <meta name="description" content="Placeholder menswear site.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Set layout before paint to avoid flash -->
+  <script>
+    try {
+      var saved = localStorage.getItem('layout');
+      if (saved === 'a' || saved === 'b') {
+        document.documentElement.setAttribute('data-layout', saved);
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header-inner">
+
+      <button class="hamburger" id="hamburger"
+              aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="wordmark">[BRAND]</a>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#collection">Collection</a>
+        <a href="#mission">Mission</a>
+        <a href="#">Craft</a>
+        <a href="#">Journal</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <a href="#" class="cart">Cart (<span id="cartCount">0</span>)</a>
+
+    </div>
+  </header>
+
+  <!-- ================= OVERLAY ================= -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Site navigation">
+    <div class="sidebar-head">
+      <span class="wordmark">[BRAND]</span>
+      <button class="close" id="closeSidebar" aria-label="Close navigation">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Sidebar">
+      <a href="#collection">Collection</a>
+      <a href="#mission">Mission</a>
+      <a href="#">Craft</a>
+      <a href="#">Journal</a>
+      <a href="#">Stockists</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <p class="sidebar-tagline">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+    </p>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Lorem ipsum &middot; Dolor sit amet</p>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-solid">Shop collection</a>
+          <a href="#mission" class="btn btn-ghost">Our mission</a>
+        </div>
+      </div>
+      <div class="hero-img img-ph"><span>Hero image</span></div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="collection" id="collection">
+      <div class="section-head">
+        <p class="eyebrow">The collection</p>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</h2>
+      </div>
+
+      <div class="grid">
+
+        <article class="product">
+          <div class="img-ph img-ph-product"><span>Image 1</span></div>
+          <h3>Product 1</h3>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="price">$120</p>
+          <button class="btn btn-solid btn-full" data-add="Product 1">Add to cart</button>
+        </article>
+
+        <article class="product">
+          <div class="img-ph img-ph-product"><span>Image 2</span></div>
+          <h3>Product 2</h3>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="price">$180</p>
+          <button class="btn btn-solid btn-full" data-add="Product 2">Add to cart</button>
+        </article>
+
+        <article class="product">
+          <div class="img-ph img-ph-product"><span>Image 3</span></div>
+          <h3>Product 3</h3>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="price">$240</p>
+          <button class="btn btn-solid btn-full" data-add="Product 3">Add to cart</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="mission" id="mission">
+      <div class="mission-inner">
+        <div>
+          <p class="eyebrow">The tithe</p>
+          <h2>Ten percent of profit, given without exception.</h2>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ten percent of profit is given to pro-life charities.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="wordmark">[BRAND]</p>
+        <p class="footer-tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#collection">Collection</a>
+        <a href="#">Shirts</a>
+        <a href="#">Outerwear</a>
+      </div>
+      <div>
+        <h4>House</h4>
+        <a href="#mission">Mission</a>
+        <a href="#">Craft</a>
+        <a href="#">Journal</a>
+      </div>
+      <div>
+        <h4>Instagram</h4>
+        <a href="#">@placeholder</a>
+        <a href="#">@placeholder2</a>
+        <a href="#">@placeholder3</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 [BRAND]. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Shipping</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= LAYOUT TOGGLE ================= -->
+  <div class="toggle" role="group" aria-label="Preview navigation layout">
+    <p class="toggle-label">Nav layout</p>
+    <div class="toggle-btns">
+      <button type="button" data-layout="a" class="active">A &middot; Sidebar</button>
+      <button type="button" data-layout="b">B &middot; Top bar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
