@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tharsos — Catholic Menswear</title>
-  <meta name="description" content="Tharsos: Holy courage in wearable form. Premium Catholic menswear.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -18,109 +17,87 @@
 </head>
 <body>
 
-  <a href="#main" class="skip">Skip to content</a>
-
   <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <a href="index.html" class="wordmark">THARSOS</a>
 
-      <a href="index.html" class="wordmark">Tharsos</a>
-
-      <nav class="topnav" aria-label="Primary">
-        <a href="index.html#shop">Shop</a>
-        <a href="#" class="wip-trigger">Collections</a>
-        <a href="mission.html">Mission</a>
-        <a href="#" class="wip-trigger clearance">Clearance</a>
+      <nav class="topnav">
+        <a href="index.html" class="active-nav">SHOP</a>
+        <a href="#" class="wip-trigger">COLLECTIONS</a>
+        <a href="mission.html">MISSION</a>
+        <a href="#" class="wip-trigger clearance">CLEARANCE</a>
       </nav>
 
       <div class="header-right">
-        <a href="#" class="wip-trigger">Contact</a>
-        <a href="#" class="cart">Cart (<span id="cartCount">0</span>)</a>
+        <a href="#" class="wip-trigger">CONTACT</a>
+        <a href="#" class="cart">CART (0)</a>
       </div>
     </div>
   </header>
 
-  <!-- OVERLAY & SIDEBAR -->
-  <div class="overlay" id="overlay" aria-hidden="true"></div>
-  <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Site navigation">
+  <!-- SIDEBAR -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-head">
-      <span class="wordmark">Tharsos</span>
-      <button class="close" id="closeSidebar" aria-label="Close navigation">&times;</button>
+      <span class="wordmark">THARSOS</span>
+      <button class="close" id="closeSidebar">&times;</button>
     </div>
-    <nav class="sidebar-nav" aria-label="Sidebar">
-      <a href="index.html#shop">Shop</a>
-      <a href="#" class="wip-trigger">Collections</a>
-      <a href="mission.html">Mission</a>
-      <a href="#" class="wip-trigger clearance">Clearance</a>
-      <a href="#" class="wip-trigger">Contact</a>
+    <nav class="sidebar-nav">
+      <a href="index.html">SHOP</a>
+      <a href="#" class="wip-trigger">COLLECTIONS</a>
+      <a href="mission.html">MISSION</a>
+      <a href="#" class="wip-trigger clearance">CLEARANCE</a>
+      <a href="#" class="wip-trigger">CONTACT</a>
     </nav>
-    <p class="sidebar-tagline">Holy courage in wearable form. Garments for the Church Militant.</p>
   </aside>
 
-  <!-- WIP BANNER -->
-  <div class="wip-banner" id="wipBanner" aria-hidden="true">
-    <div class="wip-content">
-      <h2>Work in Progress</h2>
-      <p>This section is currently under construction. Check back soon.</p>
-      <button class="btn btn-ghost" id="closeWip">Return to site</button>
-    </div>
-  </div>
-
   <!-- MAIN CONTENT -->
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-definition">
-        <h1 class="brand-title">Tharsos</h1>
-        <div class="dict-entry">
-          <p class="dict-pronounce"><em>noun</em> | <span>Greek: θάρσος</span></p>
-          <p class="dict-meaning">Courage, confidence, boldness. A holy audacity.</p>
-        </div>
+  <main>
+    <!-- HERO BANNER (Carousel / Campaign Image) -->
+    <section class="shop-hero">
+      <div class="shop-hero-bg img-ph">
+        <span class="ph-text">Large Campaign Image / Carousel</span>
       </div>
-      
-      <div class="hero-copy">
-        <p class="lede">
-          Tharsos started in 2026 with a simple frustration: the clothes we wore didn't match the faith we lived. As two young Catholics, we wanted garments that felt substantial, looked sharp, and spoke to our beliefs without shouting. 
-        </p>
-        <p class="lede">
-          We built this brand for the men and women who take their faith seriously and want to carry it into the world with quiet confidence. We aren't here to sell you feel-good slogans. We're here to offer a real profession of faith you can actually wear. <a href="mission.html" style="text-decoration: underline; color: var(--text);">Read our full mission.</a>
-        </p>
+      <div class="shop-hero-content">
+        <h1>Shop the New<br>St. Joseph Collection</h1>
+        <p>Garments built for the modern faithful.</p>
+        <a href="#bestsellers" class="btn btn-solid">Shop Now</a>
       </div>
     </section>
 
-    <!-- SHOP -->
-    <section class="shop" id="shop">
+    <!-- BESTSELLERS -->
+    <section class="bestsellers" id="bestsellers">
       <div class="section-head">
-        <p class="eyebrow">The Vanguard Collection</p>
-        <h2>Garments for the modern faithful.</h2>
+        <h2>Bestsellers</h2>
       </div>
 
       <div class="grid">
         <article class="product">
           <div class="img-ph img-ph-product"><span>Image 1</span></div>
-          <h3>Product 1</h3>
-          <p class="desc">Heavyweight structure, tailored for everyday wear.</p>
-          <p class="price">$120</p>
-          <button class="btn btn-solid btn-full" data-add="Product 1">Add to cart</button>
+          <h3>Heavyweight Tee</h3>
+          <p class="desc">100% Cotton. Boxy fit.</p>
+          <p class="price">$45</p>
+          <button class="btn btn-solid btn-full" data-add="Tee">Add to cart</button>
         </article>
 
         <article class="product">
           <div class="img-ph img-ph-product"><span>Image 2</span></div>
-          <h3>Product 2</h3>
-          <p class="desc">Fine-gauge knit, designed for quiet confidence.</p>
-          <p class="price">$180</p>
-          <button class="btn btn-solid btn-full" data-add="Product 2">Add to cart</button>
+          <h3>Vanguard Overshirt</h3>
+          <p class="desc">Waxed canvas. Utility pockets.</p>
+          <p class="price">$120</p>
+          <button class="btn btn-solid btn-full" data-add="Overshirt">Add to cart</button>
         </article>
 
         <article class="product">
           <div class="img-ph img-ph-product"><span>Image 3</span></div>
-          <h3>Product 3</h3>
-          <p class="desc">Weather-resistant outerwear for the daily grind.</p>
-          <p class="price">$240</p>
-          <button class="btn btn-solid btn-full" data-add="Product 3">Add to cart</button>
+          <h3>Merino Crewneck</h3>
+          <p class="desc">Fine gauge merino wool.</p>
+          <p class="price">$95</p>
+          <button class="btn btn-solid btn-full" data-add="Crewneck">Add to cart</button>
         </article>
       </div>
     </section>
@@ -130,23 +107,22 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <p class="wordmark">Tharsos</p>
+        <p class="wordmark">THARSOS</p>
         <p class="footer-tag">Holy courage in wearable form.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <a href="index.html#shop">All Products</a>
+        <h4>SHOP</h4>
+        <a href="index.html">All Products</a>
         <a href="#" class="wip-trigger">Collections</a>
         <a href="#" class="wip-trigger clearance-text">Clearance</a>
       </div>
       <div>
-        <h4>House</h4>
+        <h4>HOUSE</h4>
         <a href="mission.html">Mission</a>
         <a href="#" class="wip-trigger">Craftsmanship</a>
-        <a href="#" class="wip-trigger">Journal</a>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h4>CONNECT</h4>
         <a href="#" class="wip-trigger">Instagram</a>
         <a href="#" class="wip-trigger">Contact Us</a>
       </div>
@@ -161,12 +137,21 @@
     </div>
   </footer>
 
+  <!-- WIP BANNER -->
+  <div class="wip-banner" id="wipBanner">
+    <div class="wip-content">
+      <h2>Work in Progress</h2>
+      <p>This section is currently under construction. Check back soon.</p>
+      <button class="btn btn-ghost" id="closeWip">Return to site</button>
+    </div>
+  </div>
+
   <!-- LAYOUT TOGGLE -->
-  <div class="toggle" role="group" aria-label="Preview navigation layout">
+  <div class="toggle">
     <p class="toggle-label">Nav layout</p>
     <div class="toggle-btns">
-      <button type="button" data-layout="a">A &middot; Sidebar</button>
-      <button type="button" data-layout="b" class="active">B &middot; Top bar</button>
+      <button type="button" data-layout="a">A</button>
+      <button type="button" data-layout="b">B</button>
     </div>
   </div>
 
