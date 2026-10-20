@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  // ---------- Layout toggle ----------
+  // ==========================================
+  // 1. Layout Toggle Logic (A vs B)
+  // ==========================================
   var layoutButtons = document.querySelectorAll('[data-layout]');
 
   function setLayout(layout) {
@@ -20,7 +22,7 @@
       }
     }
 
-    // If switching to Layout B on desktop, close the sidebar
+    // If switching to Layout B on desktop, close the sidebar if it's open
     if (layout === 'b' && window.innerWidth >= 768) {
       closeSidebar();
     }
@@ -34,7 +36,9 @@
     })(layoutButtons[i]);
   }
 
-  // ---------- Sidebar ----------
+  // ==========================================
+  // 2. Sidebar Logic (Hamburger)
+  // ==========================================
   var hamburger = document.getElementById('hamburger');
   var sidebar = document.getElementById('sidebar');
   var overlay = document.getElementById('overlay');
@@ -76,18 +80,43 @@
     }
   });
 
-  window.addEventListener('resize', function () {
-    if (document.documentElement.getAttribute('data-layout') === 'b' && window.innerWidth >= 768) {
-      closeSidebar();
-    }
-  });
+  // ==========================================
+  // 3. Work In Progress (WIP) Banner
+  // ==========================================
+  var wipTriggers = document.querySelectorAll('.wip-trigger');
+  var wipBanner = document.getElementById('wipBanner');
+  var closeWipBtn = document.getElementById('closeWip');
 
-  // ---------- Add to cart (placeholder) ----------
+  function openWip(e) {
+    if (e) e.preventDefault(); // Stop navigation
+    wipBanner.classList.add('open');
+    wipBanner.setAttribute('aria-hidden', 'false');
+    body.classList.add('no-scroll');
+    closeSidebar(); // Ensure sidebar is closed if opened from there
+  }
+
+  function closeWip() {
+    wipBanner.classList.remove('open');
+    wipBanner.setAttribute('aria-hidden', 'true');
+    body.classList.remove('no-scroll');
+  }
+
+  for (var j = 0; j < wipTriggers.length; j++) {
+    wipTriggers[j].addEventListener('click', openWip);
+  }
+
+  if (closeWipBtn) {
+    closeWipBtn.addEventListener('click', closeWip);
+  }
+
+  // ==========================================
+  // 4. Placeholder Cart Logic
+  // ==========================================
   var cartCount = document.getElementById('cartCount');
   var count = 0;
   var addButtons = document.querySelectorAll('[data-add]');
 
-  for (var j = 0; j < addButtons.length; j++) {
+  for (var k = 0; k < addButtons.length; k++) {
     (function (btn) {
       btn.addEventListener('click', function () {
         count++;
@@ -102,15 +131,17 @@
           btn.disabled = false;
         }, 1200);
       });
-    })(addButtons[j]);
+    })(addButtons[k]);
   }
 
-  // ---------- Init layout from storage ----------
-  var saved = 'a';
+  // ==========================================
+  // 5. Initialize Layout
+  // ==========================================
+  var saved = 'b'; // Default to B
   try {
-    saved = localStorage.getItem('layout') || 'a';
+    saved = localStorage.getItem('layout') || 'b';
   } catch (e) {
-    saved = 'a';
+    saved = 'b';
   }
   setLayout(saved);
 
